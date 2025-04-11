@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiela Mae Mangao Portfolio</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white
+            margin-bottom: 100px;
+        }
+
+        header {
+            background-color: #fff;
+            background-size: 350px;
+            color: #333;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 8px 15px;
+            font-weight: bold;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+            font-size: 13px;
+        }
+
+        nav a:hover {
+            color: #f22e2e;
+        }
+
+        .hero {
+            background-color: #fc3737;
+            color: white;
+            padding: 115px 95px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .hero-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 20px;
+            border: 5px solid white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-text {
+            text-align: left;
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .hero-text p {
+            font-size: 1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .hero button {
+            font-size: 1em;
+            background-color: #000;
+            color: white;
+            font-size: 11px;
+            padding: 11px 13px;
+            border: none;
+            border-radius: 17px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+
+        .container {
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin-right: 30px;
+        }
+
+        .profile-text {
+            color: white;
+            text-align: center; /* Center the text */
+        }
+
+        .profile-text h2 {
+            margin-bottom: 10px;
+        }
+
+        .profile-text p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .contact-button {
+            background-color: white;
+            color: #ff4d4d;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: block; /* Make it a block element to center it */
+            margin: 0 auto; /* Center horizontally */
+        }
+
+        .contact-button:hover {
+            background-color: #000000;
+            color: rgb(255, 255, 255);
+        }
+
+
+        /*EDUCATION SECTION*/
+        .skills-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+            margin-bottom: 45px;
+            height: 410px;
+        }
+
+        .skills-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            background-color: black;
+            color: white;
+            padding: 8px 17px;
+            border-radius: 27px;
+            font-weight: bold;
+            font-size: 23px;
+        }
+
+        .skills-header h2 {
+            background-color: black;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 1.5rem;
+            margin: 0; /* Remove default margin */
+        }
+
+        .skills-container {
+            display: flex;
+            align-items: center; /* Vertically center items */
+            justify-content: center; /* Horizontally center items */
+            width: 100%; /* Ensure container takes full width */
+            margin-bottom: 50px;
+            margin-top: 55px;
+        }
+
+        .skills-icon-container {
+            margin-right: 8rem;
+            display: flex;
+            align-items: center; /* Vertically center icon */
+            margin-bottom: 1rem;
+        }
+
+        .skills-icon {
+            width: 250px;
+            margin-right: 1rem;
+        }
+
+        .skills-list {
+            text-align: left;
+            font-size: 17px;
+        }
+
+        .skills-list ul {
+            list-style-type: disc;
+            padding-left: 1rem;
+            margin: 0; /* Remove default margin */
+        }
+
+        .skills-list li {
+            margin-bottom: 0.5rem;
+            padding: 0; /* Remove default padding */
+        }
+
+
+        /*EDUCATION SECTION*/
+        .education-section {
+            display: flex;
+            background-color:  #fc3737;
+            color: white;
+            flex-direction: column;
+            align-items: center;
+            padding: 45px;
+            margin-bottom: 55px;
+            height: 440px;
+        }
+
+        .education-header {
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 0.10px;
+            background-color: black;
+            color: white;
+            padding: 3px 15px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        .education-header h2 {
+            background-color: black;
+            color: white;
+            margin-bottom: 1000px;
+            padding: 0.5rem 0.10rem;
+            border-radius: 20px;
+            font-size: 20px;
+            margin: 0; /* Remove default margin */
+        }
+
+        .education-list {
+            display: flex;
+            align-items: center; /* Vertically center items */
+            justify-content: center; /* Horizontally center items */
+            width: 100%; /* Ensure container takes full width */
+            margin-bottom: 60px;
+            margin-top: 55px;
+        }
+
+        .education-icon-container {
+            margin-right: 2rem;
+            display: flex;
+            align-items: center; /* Vertically center icon */
+            margin-bottom: 1rem;
+        }
+
+        .education-icon {
+            width: 280px;
+            margin-right: 1rem;
+        }
+
+        .education-list {
+            text-align: left;
+            font-size: 16px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .education-list ul {
+            list-style-type: disc;
+            padding-left: 1rem;
+            margin: 0; /* Remove default margin */
+        }
+
+        .education-list li {
+            margin-bottom: 0.5rem;
+            padding: 0; /* Remove default padding */
+            margin-left: 6em;
+        }
+
+
+        /*FREELANCE SECTION*/
+        .freelance-section {
+            text-align: center;
+            padding: 13px;
+            background-color: white;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .freelance-section h2 {
+            margin-top: 0.1em;
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #ff661f;
+        }
+
+        .freelance-section h1 {
+            font-size: 30px;
+            margin-bottom: 1rem;
+            color: #000;
+            margin-top: 80px;
+        }
+
+        .freelance-section p {
+            font-size: 18px;
+            margin-bottom: 2rem;
+            color: #000000;
+        }
+
+        .platform-container {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+            justify-content: center;
+        }
+
+        .platform {
+            text-align: center;
+            margin: 65px;
+            margin-bottom: 70px;
+            margin-top: 50px;
+            height: 105px;
+        }
+
+        .platform h3 {
+            font-size: 50px;
+            margin-top: 18px;
+            color: #ff6219;
+            margin-bottom: 0.5rem;
+        }
+
+        .platform button {
+            background-color: #000000;
+            color: rgb(255, 255, 255);
+            border: 1.5px solid #000000; /* Darker orange border */
+            padding: 5px 18px;
+            border-radius: 50px; /* More rounded corners */
+            cursor: pointer;
+            font-size: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .platform button:hover {
+            background-color: #000000;
+            color: rgb(0, 0, 0);
+        }
+
+
+        /*CONTACT SECTION*/
+        .contact-section {
+      display: flex;
+      justify-content: space-between;
+      padding: 50px;
+      background-color: #000;
+    }
+
+    .left {
+      width: 50%;
+    }
+
+    .logo-circle {
+      width: 60px;
+      height: 60px;
+      border: 2px solid white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: rgb(255, 55, 0);
+      margin-bottom: 20px;
+    }
+
+    .left p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-top: 20px;
+      max-width: 400px;
+    }
+
+    .right {
+      width: 45%;
+    }
+
+    .right h3 {
+      color: rgb(255, 55, 0);
+      margin-bottom: 20px;
+    }
+
+    .paragraph{
+        color: white;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      font-size: 16px;
+      color: white;
+    }
+
+    .contact-item img {
+      width: 35px;
+      margin-right: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      background-color: #fff;
+      color: #000000;
+      padding: 15px 0;
+      border-top: 1px solid #ccc;
+    }
+
+    .footer span {
+      font-family: Arial, Helvetica, sans-serif
+    }
+
+    .footer::before {
+      content: "©";
+      margin-right: 5px;
+      font-family: Arial, sans-serif;
+    }
+
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            ..skills-section {
+                padding: 20px;
+            }
+            .skills-container {
+                flex-direction: column; /* Stack items vertically on smaller screens */
+                align-items: center;
+            }
+            .skills-icon-container {
+                margin-bottom: 20px; /* Add space below icon on smaller screens */
+                margin-right: 0;
+            }
+            .skills-list {
+                text-align: center;
+            }
+            .education-list {
+                flex-direction: column; /* Stack items vertically */
+                align-items: center;
+                width: 100%; /* Take full width */
+                margin: 0;
+            }
+            .education-icon {
+                margin-bottom: 20px;
+                margin-right: 0;
+            }
+            .platform-container {
+                flex-direction: column;
+                align-items: center;
+                width: 90%;
+            }
+            .platform {
+                margin: 1rem 0;
+            }
+    }
+    </style>   
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#">Home</a>
+        </nav>
+        <nav>
+            <a href="#aboutme">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#freelance">Freelance</a>
+            <a href="#contactme">Contact Me</a>
+        </nav>
+    </header>
+
+    <section id="AboutMe">
+    <div class="hero">
+        <img class="hero-image" src="file:///C:/Users/Shie/Downloads/Mangao/unnamed.jpg" alt="Shiela Mae Mangao">
+        <div class="hero-text">
+            <h4 style="margin-bottom: 0.0;"> HI, I'M</h4>
+            <h2 style="margin-top: 0.0;">Shiela Mae Mangaо</h2>
+            <p>I have experience in video editing and graphic designing for 3 years and live in the Philippines. I am planning to take courses and learn new skills with higher-paying jobs that align with a virtual assistant and will help with the business problems of my clients.</p>
+        <button class="contact-button"><a href="https://www.linkedin.com/in/shiela-mae-f-mangao-">CONTACT ME</a></button>
+        </div>
+    </div>
+</section>
+    
+
+
+
+    <!--SKILLS SECTION-->
+    <section id="skills">
+    <section class="skills-section">
+        <div class="skills-header">SKILLS</div>
+        <div class="skills-container">
+            <div class="skills-icon-container">
+                <img src="file:///C:/Users/Shie/Downloads/Mangao/hy.png" alt="Skills Icon" class="skills-icon">
+            </div>
+            <div class="skills-list">
+                <ul>
+                    <li>Video Editing</li>
+                    <li>Graphic Design</li>
+                    <li>Collaboration</li>
+                    <li>Time Management</li>
+                    <li>Creativity and Innovation</li>
+                    <li>Curiosity</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</section>
+
+
+    <!--EDUCATION SKILLS-->
+    <section id="education">
+    <div class="education-section">
+        <div class="education-header">
+            <h2>EDUCATION</h2>
+        </div>
+        <div class="education-list">
+            <div>
+                <img src="file:///C:/Users/Shie/Downloads/Mangao/upscalemedia-transformed.png" alt="Graducation Cap" Cap class="education-icon">
+            </div>
+            <div>
+                <ul>
+                    <li>2010 - 2011 Our Lady of Perpetual Help</li>
+                    <li>2012 - 2015 Linao Elementary School</li>
+                    <li>2015 - 2016 Holy Spirit Preparatory Academy</li>
+                    <li>2016 - 2017 Manuel L. Quezon Elementary School</li>
+                    <li>2017 - 2022 Holy Spirit National High School</li>
+                    <li>2022 - 2024 Our Lady of Fatima University (Senior High School)</li>
+                    <li>2024 - 2028 Our Lady of Fatima University (College)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!--FREELANCE SECTION-->
+    <section id="freelance">
+    <div class="freelance-section">
+        <h2>FREELANCE</h2>
+        <h1>Hire Me As A Freelancer</h1>
+        <p>I am available on different platforms. 
+            <br>
+            You can hire me on given platforms.</p>
+        <div class="platform-container">
+            <div class="platform">
+                <h3>UPWORK</h3>
+                <button><a href="https://www.upwork.com/freelancers/~01e3844051a38ecd75?mp_source=share">HIRE ME</a></button>
+            </div>
+            <div class="platform">
+                <h3>FIVERR</h3>
+                <button><a href="https://www.fiverr.com/shielamaemangao/buying?source=avatar_menu_profile"> HIRE ME</a></button>
+            </div>
+            <div class="platform">
+                <h3>LINKEDIN</h3>
+                <button><a href="https://www.linkedin.com/in/shiela-mae-f-mangao-"> HIRE ME</a></button>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+    <!--FOOTER-->
+    <section id="contactme">
+    <div class="contact-section">
+        <div class="left">
+          <div class="logo-circle">SM</div>
+        <div class="paragraph"><p>
+            Find me on social media for updates, behind-the-scenes glimpses, and a chance to connect.
+            I share my latest projects, creative experiments, and industry insights across various platforms,
+            offering a more personal and interactive view of my work beyond this portfolio. Let's connect and collaborate!
+          </p>
+          </div>
+        </div>
+        <div class="right">
+          <h3>CONTACT ME</h3>
+          <div class="contact-item">
+            <img src="file:///C:/Users/Shie/Downloads/Mangao/apple-mail.png"/>
+            shielamaemangao65@gmail.com
+          </div>
+          <div class="contact-item">
+            <img src="file:///C:/Users/Shie/Downloads/Mangao/whatsapp--v1.png"/>
+            09682513921
+          </div>
+          <div class="contact-item">
+            <img src="file:///C:/Users/Shie/Downloads/Mangao/facebook-new.png"/>
+            <a href="https://www.facebook.com/itsshielafajel13" target="_blank">https://www.facebook.com/itsshielafajel13</a>
+          </div>
+          <div class="contact-item">
+            <img src="file:///C:/Users/Shie/Downloads/Mangao/instagram-new.png">
+            <a href="https://www.instagram.com/xiaayahh/_blank-" target="_blank">https://www.instagram.com/xiaayahh/_blank-</a>
+          </div>
+          <div class="contact-item">
+            <img src="file:///C:/Users/Shie/Downloads/Mangao/linkedin.png"/>
+            <a href="https://www.linkedin.com/in/shiela-mae-f-mangao-" target="_blank">https://www.linkedin.com/in/shiela-mae-f-mangao-</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="footer">
+        <span> 2025 Shiela Mae. All rights reserved</span>
+      </div>
+    </section>
+    
+</body>
+</html>
